@@ -1,0 +1,20 @@
+{
+  "name": "atividades",
+  "version": "1.0.0",
+  "description": "TP3-Microsservicos",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "nodemonConfig":{
+    "ignore":["dados/*json"]
+  },
+  "author": "Aislan Almeida",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
