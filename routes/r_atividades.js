@@ -21,7 +21,6 @@ router.post('/entregar',async(req,res) =>{
     }
     else{
         let entrega = await atividadeService.entregarAtividade(idAtividade,idAluno,resposta);
-
         res.status(200).json(entrega);
     }
 })
@@ -36,6 +35,16 @@ router.post('/corrigir',async(req,res)=>{
         let atividade = await atividadeService.corrigirAtividade(idAtividade,idAluno,correto);
         res.status(200).json(atividade);
     }
+})
+
+router.get('/',async (req,res) =>{
+    let atividades = await atividadeService.obterAtividades();
+    res.status(200).json(atividades);
+})
+
+router.get('/entregues', (req,res) =>{
+    atividadeService.obterAtividadesEntregues();
+    res.status(200).json('Mensagens Rece');
 })
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const axios = require('axios');
 //PREENCHA AQUI O IP:PORTA DA MAQUINA QUE HOSPEDA O SERVIÇO DE ALUNOS
-const IP_MICROSSERVICO_ALUNOS = "0.0.0.0:3000";
+const IP_MICROSSERVICO_ALUNOS = "localhost:3001";
 
 class Aluno{
     static async obterAlunos(){
